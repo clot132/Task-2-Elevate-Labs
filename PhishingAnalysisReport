@@ -1,0 +1,16 @@
+## **Phishing Analysis Report:**
+
+**1. DMARC Failure**
+
+* DMARC (Domain-based Message Authentication, Reporting & Conformance) is designed to prevent spoofing by ensuring that the email comes from an authorized source aligned with the sender’s domain.
+* The failure indicates this email did not pass domain verification, which is common in phishing emails trying to impersonate trusted organizations.
+
+**2. SPF Alignment Problem**
+
+* SPF (Sender Policy Framework) verifies if the sender's IP address is authorized to send mail on behalf of the domain.
+* While the SPF check passed technically, the domain in the “From” address did not align with the authorized SPF domain, suggesting possible spoofing.
+
+**3. DKIM Failure**
+
+* DKIM (DomainKeys Identified Mail) uses a cryptographic signature to verify the email’s integrity and sender domain authenticity.
+* Failure of DKIM authentication and alignment suggests the email content may have been altered or forged, a red flag for phishing.
