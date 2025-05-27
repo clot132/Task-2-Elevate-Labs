@@ -1,0 +1,65 @@
+Delivered-To: nishant617.be22@chitkara.edu.in
+Received: by 2002:a05:7108:4b96:b0:461:56bd:56f2 with SMTP id hn22csp1635443gdb;
+        Tue, 27 May 2025 08:23:28 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFPaBzuaryEqAplRgx4anE333CDoqp3vDmQPtG/0oU3fC9/ieEixkGmn5nl3QrJCtEiwUpt
+X-Received: by 2002:ad4:5bad:0:b0:6f5:f6e:832a with SMTP id 6a1803df08f44-6fa9d1435d5mr236310876d6.19.1748359368772;
+        Tue, 27 May 2025 08:22:48 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1748359368; cv=none;
+        d=google.com; s=arc-20240605;
+        b=VbYat9SbvFN//UPdVZB0a7Le6pfhseYDHyv4T3++S/I/syIq+r4c84kJzfqB5DxMMQ
+         CAvMZJsVXn4Fig63T3RjRT+hnG3ZL4Jyex2GKYKPsIklNKi726iEGJ0jfMZ5gWTIfRq/
+         LZ4YJ+ZCF95Jl2K57H1tx5nWyPprsLYqW2hPTouXBtsxRb9kw7YCRqa+IJTaBtC1kukP
+         P3bbWWv21y/kxmSL5aluemlpX7JSzA3M+obiWvXmeeFKdpgA6WBrDAYFSiqFXRMkBANk
+         BWAzZ1fpjf+MFH/udBqkkWN1yWKJq9yilDL1E1SyX4IHtZt1ma+MvtcWp5H+6Q7nEWVC
+         9jjQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:mime-version:subject:to:reply-to:from
+         :date:dkim-signature:message-id;
+        bh=bfMmUJ+kOSYMB9Y2bJhmcoUzORml4HXwpkGwsSBoE5k=;
+        fh=jWJG6PoBBw8zlf1S4bW96LW1N1aPb4y/+7bcOZmjJoA=;
+        b=UQ02Inn0Djw/QFVRgH7E7INgF9hRFroWTyzrg+eC7YmcYFfXk9TQxIjLK/RTdHCZJ4
+         4VFVHAmCeWAKh4UTa4yJRyfgLdmH0cH/UctP6hXKcN8IOUu+SzvjY0vmF8WVUU0GhGos
+         VIoFh94gMGj18AEuhEWDmeCyV3r1uO6QRgA53h1W3zeszVnxK0rLfmPUER927aCVP/OH
+         mYw6aDNWyBVSdJlGAGYqkPXdtJBeFx/tE/BC3rZJt2MbtJQ1u8T+65glrkFMxgMXTSWr
+         Q8UJjngDyCRWGz4xRE9lAIc8/w7okvXg/1M1e6oe/+X7Kq2io61xLcDF/3dSuUdMV2gl
+         nYUQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ispservices.org header.s=15dd344475d0f54a header.b=KPOhLHgT;
+       spf=pass (google.com: domain of 1382ac6fe.b9e7981d@psm.knowbe4.com designates 23.21.109.212 as permitted sender) smtp.mailfrom=1382ac6fe.b9e7981d@psm.knowbe4.com;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=chitkara.edu.in
+Return-Path: <1382ac6fe.b9e7981d@psm.knowbe4.com>
+Received: from psm.knowbe4.com (psm.knowbe4.com. [23.21.109.212])
+        by mx.google.com with UTF8SMTPS id 6a1803df08f44-6faba0fde6asi5441346d6.70.2025.05.27.08.22.48
+        for <nishant617.be22@chitkara.edu.in>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 27 May 2025 08:22:48 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 1382ac6fe.b9e7981d@psm.knowbe4.com designates 23.21.109.212 as permitted sender) client-ip=23.21.109.212;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ispservices.org header.s=15dd344475d0f54a header.b=KPOhLHgT;
+       spf=pass (google.com: domain of 1382ac6fe.b9e7981d@psm.knowbe4.com designates 23.21.109.212 as permitted sender) smtp.mailfrom=1382ac6fe.b9e7981d@psm.knowbe4.com;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=chitkara.edu.in
+Message-ID: <1382ac6fe.b9e7981d@psm.knowbe4.com>
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=simple/simple; s=15dd344475d0f54a; d=ispservices.org; t=1748359368;
+  h=from; bh=bfMmUJ+kOSYMB9Y2bJhmcoUzORml4HXwpkGwsSBoE5k=; b=KPOhLHgT27j2ctLNAHVlK2e/5blOpM61OEvlpP4WhSHwq8Gcp5iC+fLzOpKYjcV/5IlyBN wb/p3wVBMd2qcDkpDoqEs1ZMAiKoBXamEyJyEcX3r7X8phs6afpJV8S0h9m0dL/qjxmliN igEQCwHvBBuDtpNKgwZYO5V7ivOxLcKS0vZKwVjxplCZizTsszGMPlczEDbXHARKEf81FJ KFXTxfkrX1ODTaUC7/M2xSbsbKMYA0NgDzGvwtia4Uc3MuL6lPJxKXoqS3vCbc20h9zhXb EoZgHixLZZ6FRDMo4t4HH06OdmTRY4L9gpxMJ9Ad8tcsqB3P81/eZsZns2Wp9w==
+Date: Tue, 27 May 2025 15:22:48 +0000
+From: IT <IT@chitkara.edu.in>
+Reply-To: IT <IT@chitkara.edu.in>
+To: nishant617.be22@chitkara.edu.in
+Subject: Change of Password Required Immediately
+Mime-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-PHISH-CRID: 2544473988
+X-PHISHTEST: This is a phishing security test from KnowBe4 that has been authorized by the recipient organization
+
+We suspect a security breach happened earlier this week. In order to prevent further damage, we need everyone to change their password immediately.<br>
+<br>
+Please click here to do that:<br>
+<br>
+<a href="https://en-us.secureconnection.moneytransaction.kb4.io/XaUxHYWNEbm9FWXYxc0VNaFZoRGRrQ0hENG1QL3VZajBSbzRUOFo3SHNiWXRTSDN5bWd2NUE5bnAvaWdZK1BtRk1veEJXeDdhVzNHczkzQVRTMUF5cFczTDZNWlNQSFdKMTk1UnRQY01iQXY2UFMwK0lndjI5NmpCcTlDTjJqMEl1eEpkZEs3bHVYa0JyKzR6RW4xUWwxaE9YdkVZQ3pGdHRFdGNZUVd4TFBYTnZuQkVmK1dJZlF1Z3poSEdtenY2SGc9PS0tNXowZGNhVzB3MW90TjVJbS0taW1NU0k4T1N2V1VMZEJmRGxnZEFBdz09?cid=2544473988" style='display:block;height:0;opacity:0;pointer-events:none;width:0;'> </a><a href="https://en-us.secureconnection.moneytransaction.kb4.io/XSmo1cnlSYnltZ2dwSGRCQzZkd1ltVWFMYmNQaTY3Zzh4Qzg2aytJT0NVZG8rWnRjN3pwclhkaHJYRFpiaDlERC83amVYc0dVb3lBRm85Vm4zdUNSOFBnMnFIRC95bXR1TVJSc1YzMDdEOEYzRWdibEVWdGo1WEFhOUlIWkxlNUNCVlI4ejFodlN6OE5XbW5vU1l1eHRyVUxoTXRJajRhSDBIVUF3Mk9UbVVEdU03aEl0SENrSWVNVUx3PT0tLUw5Wi9ITE41RUtDV05RalYtLVA0aVp2OW9UeXZRdE1aMmRTS0haZ2c9PQ==?cid=2544473988" target="_blank">Change Password</a><br>
+<br>
+Please do this right away. Thanks!<br>
+<br>
+Sincerely,<br>
+IT<img src="https://en-us.secureconnection.moneytransaction.kb4.io/XWUQwcWhYQnNBLzNnMzdWVWVSQmt5SE9LeVZjNERUeUlCWDhaODg4aGVibzdSSFVwVWNTbkF1TWZXYmF4dUlOYjdEcm9lK0JwMzNocklXdE1SaWVxbG5NbnMyRXJtbjhZN0trUFloQVMzSXhHV0dSeEpBVUZ0UT09LS1mZTNSamt2MnFvVHJBYU1tLS1wRTY1T1l0L1ZEMUtvaVhMSmc1NnhBPT0=?cid=2544473988" width="0" height="0">
