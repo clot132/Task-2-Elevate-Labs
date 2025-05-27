@@ -42,6 +42,7 @@ Identify phishing characteristics in a suspicious email sample to understand how
 5. **Analyzed the Email Header on MXToolbox**
 
    * Pasted the copied header into MXToolbox Email Header Analyzer. (https://mxtoolbox.com/EmailHeaders.aspx)
+   * See header.txt file.
    * Reviewed authentication results for SPF, DKIM, and DMARC protocols.
 
 6. **Reviewed Authentication Results:**
